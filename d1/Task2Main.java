@@ -1,9 +1,9 @@
 package d1;
 
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.Scanner; // Import the Scanner class to read text files
-import java.io.FileInputStream; //used to reset file reading scanners
+import java.io.File;	// Import the File class
+import java.io.FileNotFoundException;	// Import this class to handle errors
+import java.util.Scanner;	// Import the Scanner class to read text files
+import java.io.FileInputStream;	//used to reset file reading scanners
 
 public class Task2Main {
   public static void main(String[] args) {
@@ -16,15 +16,15 @@ public class Task2Main {
     	Scanner myReader2 = new Scanner(new FileInputStream(myObj2)); 	//reader for value 2
     	Scanner myReader3 = new Scanner(new FileInputStream(myObj3));	//reader for value 3
     	boolean gotAnswer = false; 										/*stops the loop when answer is gotten, 
-    																	otherwise gives answer 2 times in different order*/
+    															otherwise gives answer 2 times in different order*/
     	
     	while (myReader1.hasNextLine() && gotAnswer == false) {
-    		int val1 = Integer.parseInt(myReader1.nextLine());				//takes first value to be compared in the second while loop
+    		int val1 = Integer.parseInt(myReader1.nextLine());		//takes first value to be compared in the second while loop
     		 
     		while (myReader2.hasNextLine()) {
-    			int val2 = Integer.parseInt(myReader2.nextLine());			//takes second value to be compared in the third while loop
+    			int val2 = Integer.parseInt(myReader2.nextLine());	//takes second value to be compared in the third while loop
     			
-    			if(val1 != val2) {		//only different values can be summed
+    			if(val1 != val2) {	//only different values can be summed
     			
 	    			while (myReader3.hasNextLine()) {
 	    				int val3 = Integer.parseInt(myReader3.nextLine());	//takes third value
@@ -33,9 +33,9 @@ public class Task2Main {
 	    	    			if(val1 + val2 + val3 == 2020) {	//prints answer when sum is 2020
 	    	    				
 	    	    				System.out.println("Answer: " + val1 + ", " + val2
-	    	    									+ ", and " + val3 + ". Multiplication: "
+	    	    									+ ", and " + val3 + ". Product: "
 	    	    									+ val1*val2*val3);
-	    	    				gotAnswer = true;							//takes forever to process but works :D
+	    	    				gotAnswer = true;					//takes forever to process but works :D
 	    	    			}
 	    				}
 	    			}

@@ -17,16 +17,16 @@ public class Task1Main {
     							//otherwise gives answer 2 times in different order
     	
     	while (myReader1.hasNextLine() && gotAnswer == false) {
-    		int num1 = Integer.parseInt(myReader1.nextLine());
+    		int val1 = Integer.parseInt(myReader1.nextLine());
     		 //takes a value to be compared in the second while loop
     		
     		while (myReader2.hasNextLine()) {
-    			int num2 = Integer.parseInt(myReader2.nextLine());
+    			int val2 = Integer.parseInt(myReader2.nextLine());
     			
-    			if(num1 != num2) { //only two different values can be summed
-	    			if(num1 + num2 == 2020) {
-	    				System.out.println("Answer: " + num1 + " and " + num2 
-	    						+ ". Multiplication: " + num2*num1);
+    			if(val1 != val2) { //only two different values can be summed
+	    			if(val1 + val2 == 2020) {
+	    				System.out.println("Answer: " + val1 + " and " + val2 
+	    						+ ". Multiplication: " + val2*val1);
 	    				gotAnswer = true;
 	    			} //compares first value with all values from data
     			}
